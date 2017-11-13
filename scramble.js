@@ -17,7 +17,7 @@ var scramNot = [
 ];
 
 document.getElementById('helpButton').onclick = function () {
-	window.open('scramblehelp.html');
+	window.open('https://cubiotimer.github.io/cubiohelp/');
 };
 
 document.getElementById('scramType').onchange = function () {

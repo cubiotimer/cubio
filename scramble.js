@@ -10,14 +10,14 @@ var scramNot = [
 	['F', 'B', 'R', 'L', 'U', 'D', 'F\'', 'B\'', 'R\'', 'L\'', 'U\'', 'D\'', 'F2', 'B2', 'R2', 'L2', 'U2', 'D2', 'Fw', 'Bw', 'Rw', 'Lw', 'Uw', 'Dw', 'Fw\'', 'Bw\'', 'Rw\'', 'Lw\'', 'Uw\'', 'Dw\'', 'Fw2', 'Bw2', 'Rw2', 'Lw2', 'Uw2', 'Dw2', '3Fw', '3Bw', '3Rw', '3Lw', '3Uw', '3Dw', '3Fw\'', '3Bw\'', '3Rw\'', '3Lw\'', '3Uw\'', '3Dw\'', '3Fw2', '3Bw2', '3Rw2', '3Lw2', '3Uw2', '3Dw2', '\n\nin development'],
 	['F', 'B', 'R', 'L', 'U', 'D', 'F\'', 'B\'', 'R\'', 'L\'', 'U\'', 'D\'', 'F2', 'B2', 'R2', 'L2', 'U2', 'D2', 'Fw', 'Bw', 'Rw', 'Lw', 'Uw', 'Dw', 'Fw\'', 'Bw\'', 'Rw\'', 'Lw\'', 'Uw\'', 'Dw\'', 'Fw2', 'Bw2', 'Rw2', 'Lw2', 'Uw2', 'Dw2', '3Fw', '3Bw', '3Rw', '3Lw', '3Uw', '3Dw', '3Fw\'', '3Bw\'', '3Rw\'', '3Lw\'', '3Uw\'', '3Dw\'', '3Fw2', '3Bw2', '3Rw2', '3Lw2', '3Uw2', '3Dw2', '\n\nin development'],
 	['$:B,R,L,U,B\',R\',L\',U\'\n\n@a{0}[e](n11)\n\n%a'],
-	['$:B,R,L,U,B\',R\',L\',U\'\n$:b,r,l,u,b\',r\',l\',u\'\n\n@a{0}[e](n11)\n@b{1}[e](r0-4)\n\n%ab'],
+	['$:B,R,L,U,B\',R\',L\',U\'\n$:b,r,l,u,b\',r\',l\',u\'\n\n@a{0}[e](n11)\n@b{1}[e](s0-4)\n\n%ab'],
 	['in development'],
 	['$:R++,R--\n$:D++,D--\n$:U,U\'\n\n@r{0}[e](n1)\n@d{1}[e](n1)\n@u{2}[e](n1)\n\n%rdrdrdrdrdurdrdrdrdrdurdrdrdrdrdurdrdrdrdrdurdrdrdrdrdurdrdrdrdrdurdrdrdrdrdu'],
-	['WARNING: MAY CRASH BROWSER\n\n$:UR5-,UR4-,UR3-,UR2-,UR1-,UR0,UR1+,UR2+,UR3+,UR4+,UR5+,UR6\n$:DR5-,DR4-,DR3-,DR2-,DR1-,DR0,DR1+,DR2+,DR3+,DR4+,DR5+,DR6\n$:UL5-,UL4-,UL3-,UL2-,UL1-,UL0,UL1+,UL2+,UL3+,UL4+,U:5+,UL6\n$:DL5-,DL4-,DL3-,DL2-,DL1-,DL0,DL1+,DL2+,DL3+,DL4+,DL5+,DL6\n$:U5-,U4-,U3-,U2-,U1-,U0,U1+,U2+,U3+,U4+,U5+,U6\n$:R5-,R4-,R3-,R2-,R1-,R0,R1+,R2+,R3+,R4+,R5+,R6\n$:D5-,D4-,D3-,D2-,D1-,D0,D1+,D2+,D3+,D4+,D5+,D6\n$:L5-,L4-,L3-,L2-,L1-,L0,L1+,L2+,L3+,L4+,L5+,L6\n$:ALL5-,ALL4-,ALL3-,ALL2-,ALL1-,ALL0,ALL1+,ALL2+,ALL3+,ALL4+,ALL5+,ALL6\n$:UR,DR,DL,UL\n$:y2\n\n@n{0}[e](n1)\n@o{1}[e](n1)\n@p{2}[e](n1)\n@q{3}[e](n1)\n@u{4}[e](n1)\n@r{5}[e](n1)\n@d{6}[e](n1)\n@l{7}[e](n1)\n@a{8}[e](n1)\n@t{9}[e](r0-4)\n@y{10}[0](l)\n\n%nopqurdlayurdlat']
+	['$:UR5-,UR4-,UR3-,UR2-,UR1-,UR0,UR1+,UR2+,UR3+,UR4+,UR5+,UR6\n$:DR5-,DR4-,DR3-,DR2-,DR1-,DR0,DR1+,DR2+,DR3+,DR4+,DR5+,DR6\n$:UL5-,UL4-,UL3-,UL2-,UL1-,UL0,UL1+,UL2+,UL3+,UL4+,U:5+,UL6\n$:DL5-,DL4-,DL3-,DL2-,DL1-,DL0,DL1+,DL2+,DL3+,DL4+,DL5+,DL6\n$:U5-,U4-,U3-,U2-,U1-,U0,U1+,U2+,U3+,U4+,U5+,U6\n$:R5-,R4-,R3-,R2-,R1-,R0,R1+,R2+,R3+,R4+,R5+,R6\n$:D5-,D4-,D3-,D2-,D1-,D0,D1+,D2+,D3+,D4+,D5+,D6\n$:L5-,L4-,L3-,L2-,L1-,L0,L1+,L2+,L3+,L4+,L5+,L6\n$:ALL5-,ALL4-,ALL3-,ALL2-,ALL1-,ALL0,ALL1+,ALL2+,ALL3+,ALL4+,ALL5+,ALL6\n$:UR,DR,DL,UL\n$:y2\n\n@n{0}[e](n1)\n@o{1}[e](n1)\n@p{2}[e](n1)\n@q{3}[e](n1)\n@u{4}[e](n1)\n@r{5}[e](n1)\n@d{6}[e](n1)\n@l{7}[e](n1)\n@a{8}[e](n1)\n@t{9}[e](s0-4)\n@y{10}[0](l)\n\n%nopqurdlayurdlat']
 ];
 
 document.getElementById('helpButton').onclick = function () {
-	window.open('https://cubiotimer.github.io/cubiohelp/');
+	window.open('scramblehelp.html');
 };
 
 document.getElementById('scramType').onchange = function () {
@@ -29,7 +29,7 @@ function showScramType() {
 }
 
 window.addEventListener('keydown', function (event) {
-	if (event.keyCode === newScramKey && !optionOpen) {
+	if (event.keyCode === newScramKey && !optionOpen && !timerStart) {
 		newScramble();
 	}
 });
@@ -93,28 +93,9 @@ function newScramble() {
 							}
 						}
 					} else if (variables[pv][3].split('')[0] === 'o') {
-						console.log('o');
+						return true;
 					} else if (variables[pv][3].split('')[0] === 'r') {
-						var min = +variables[pv][3].split('r')[1].split('-')[0];
-						var max = +variables[pv][3].split('r')[1].split('-')[1] + 1;
-						var ranLen = Math.floor(Math.random() * (max - min));
-						var reserved = [];
-						var curRes = false;
-						for (var n = 0; n < ranLen; n ++) {
-							var ran = Math.floor(Math.random() * curArray.length);
-							curRes = false;
-							for (var r = 0; r < reserved.length; r ++) {
-								if (curArray[ran].split('')[0] === reserved[r].split('')[0]) {
-									curRes = true;
-								}
-							}
-							if (!curRes) {
-								scrambleOut[scrambleOut.length] = curArray[ran];
-								reserved[reserved.length] = curArray[ran].split('')[0];
-							} else {
-								n -= 1;
-							}
-						}
+						return true;
 					} else if (variables[pv][3].split('')[0] === 's') {
 						var min = +variables[pv][3].split('s')[1].split('-')[0];
 						var max = +variables[pv][3].split('s')[1].split('-')[1] + 1;

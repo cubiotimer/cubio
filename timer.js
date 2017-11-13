@@ -17,6 +17,8 @@ window.addEventListener('keydown', function (event) {
 			timerStart = false;
 			clearInterval(mainTimer);
 			timerStopped = true;
+			sessions[curSes][1].push([curTime, document.getElementById('scramble').innerHTML, '']);
+			updateSession();
 			curTime = 0;
 		}
 	}
@@ -63,32 +65,44 @@ function startTimer() {
 	inspectionStart = false;
 	mainTimer = setInterval(function () {
 		curTime += 1;
-		h = Math.floor(curTime / 100 / 60 / 60);
-		if (h < 10) {
-			h = '0' + h;
-		}
-		if (h == 0) {
-			h = '';
-		} else {
-			h = h + ':';
-		}
-		m = Math.floor(curTime / 100 / 60 % 60);
-		if (m < 10 && h != 0) {
-			m = '0' + m;
-		}
-		if (m == 0) {
-			m = '';
-		} else {
-			m = m + ':';
-		}
-		s = Math.floor(curTime / 100 % 60);
-		if (s < 10 && m != 0) {
-			s = '0' + s;
-		}
-		l = curTime % 100;
-		if (l < 10) {
-			l = '0' + l;
-		}
-		document.getElementById('time').innerHTML = h + '' + m + '' + s + '.' + l;
+		document.getElementById('time').innerHTML = convertTime(curTime);
 	}, 10);
+}
+
+// CONVERT NUMBER TO TIME
+function convertTime(inTime) {
+	this.inTime = inTime;
+	var inH = Math.floor(inTime / 100 / 60 / 60);
+	if (inH === 0) {
+		inH = '';
+	}
+	if (inH < 10) {
+		inH = '0' + inH;
+	}
+	if (inH == 0) {
+		inH = '';
+	} else {
+		inH = inH + ':';
+	}
+	var inM = Math.floor(inTime / 100 / 60 % 60);
+	if (inM === 0) {
+		inM = '';
+	}
+	if (inM < 10 && inH != 0) {
+		inM = '0' + inM;
+	}
+	if (inM == 0) {
+		inM = '';
+	} else {
+		inM = inM + ':';
+	}
+	var inS = Math.floor(inTime / 100 % 60);
+	if (inS < 10 && inM != 0) {
+		inS = '0' + inS;
+	}
+	var inL = inTime % 100;
+	if (inL < 10) {
+		inL = '0' + inL;
+	}
+	return inH + '' + inM + '' + inS + '.' + inL;
 }

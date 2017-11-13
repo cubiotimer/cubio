@@ -4,7 +4,7 @@
 	<title>
 		CUBIO
 	</title>
-	<link rel="stylesheet" type="text/css" href="css.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
 	<link href="https://fonts.googleapis.com/css?family=Allerta Stencil" rel="stylesheet">
 </head>
 </div>
@@ -12,69 +12,19 @@
 <div class="cont">
 	<div class="header">
 		<span id="options">options</span>
-		<span class="session">session #0</span>
-	</div>
-	<div class="contbody">
-		<div class="optionback">
-			<div class="optionbody">
-				<div class="optionlist">
-					<div class="listoption" onclick="optionSel(0)">scramble</div>
-					<div class="listoption" onclick="optionSel(1)">inspection</div>
-					<div class="listoption" onclick="optionSel(2)">keybinds</div>
-					<div class="listoption" onclick="optionSel(3)">theme</div>
-				</div>
-				<div class="optionlistcont">
-					<div class="contopt" id="contopt0">
-						<div class="listcontheader">
-							scramble
-						</div>
-						<select id="scramType">
-							<option disabled>WCA</option>
-							<option value="0">2x2</option>
-							<option value="1" selected>3x3</option>
-							<option value="2">4x4</option>
-							<option value="3">5x5</option>
-							<option value="4">6x6</option>
-							<option value="5">7x7</option>
-							<option value="6">Skewb</option>
-							<option value="7">Pyraminx</option>
-							<option value="8">Square-1</option>
-							<option value="9">Megaminx</option>
-							<option value="10">Clock</option>
-							<option disabled></option>
-							<option disabled>CUSTOM</option>
-						</select><button id="helpButton">Help</button>
-						<br>
-						<textarea id="scramCode" placeholder="Code Here"></textarea>
-					</div>
-					<div class="contopt" id="contopt1">
-						<div class="listcontheader">
-							inspection
-						</div>
-						<span title="Enable or Disable Inspection">
-							<input type="checkbox" id="inspectioncb" checked><label for="inspectioncb">inspection</label>
-						</span>
-						<br>
-						<input type="number" id="inspectionTime" value="15" max="999"> seconds
-					</div>
-					<div class="contopt" id="contopt2">
-						<div class="listcontheader">
-							keybinds
-						</div>
-						keybinds option
-					</div>
-					<div class="contopt" id="contopt3">
-						<div class="listcontheader">
-							theme
-						</div>
-						theme option
-					</div>
-				</div>
-				<div class="closeoption">
-					&times
+		<div class="sessionmenu">
+			<div class="sessionheader">
+				<div id="currentSession">
 				</div>
 			</div>
+			<div class="sessioncont">
+				<select class="sesele" id="sessionList">
+				</select><input class="sesele" id="sessionname"><button class="sesele" id="addSes" title="Add blank session">+</button><button class="sesele" id="removeSes" title="Remove current session">-</button>
+				<div id="sessioninfo"></div>
+			</div>
 		</div>
+	</div>
+	<div class="contbody">
 		<div id="scramble"></div>
 		<div class="dispcont">
 			<div id="time">
@@ -83,12 +33,79 @@
 		</div>
 	<div>
 </div>
+<div class="optionback">
+	<div class="optionbody">
+		<div class="optionlist">
+			<div class="listoption" onclick="optionSel(0)">scramble</div>
+			<div class="listoption" onclick="optionSel(1)">inspection</div>
+			<div class="listoption" onclick="optionSel(2)">keybinds</div>
+			<div class="listoption" onclick="optionSel(3)">theme</div>
+		</div>
+		<div class="optionlistcont">
+			<div class="contopt" id="contopt0">
+				<div class="listcontheader">
+					scramble
+				</div>
+				<select id="scramType">
+					<option disabled>WCA</option>
+					<option value="0">2x2</option>
+					<option value="1" selected>3x3</option>
+					<option value="2">4x4</option>
+					<option value="3">5x5</option>
+					<option value="4">6x6</option>
+					<option value="5">7x7</option>
+					<option value="6">Skewb</option>
+					<option value="7">Pyraminx</option>
+					<option value="8">Square-1</option>
+					<option value="9">Megaminx</option>
+					<option value="10">Clock</option>
+					<option disabled></option>
+					<option disabled>CUSTOM</option>
+				</select><button id="helpButton">Help</button>
+				<br>
+				<textarea id="scramCode" placeholder="Code Here"></textarea>
+				<h6><span>NOTE: pyraminx and clock do not produce offical scrambles.</span></h6>
+				plans:
+				<ul>
+					<li>r#1-#2: Just like s#1-#2, except notation wont be repeated.</li>
+					<li>Numbers at the beginning of notation interfere with same notation checking. Plan to fix this so notation from 6x6 and greater are compatible.</li>
+				<ul>
+			</div>
+			<div class="contopt" id="contopt1">
+				<div class="listcontheader">
+					inspection
+				</div>
+				<span title="Enable or Disable Inspection">
+					<input type="checkbox" id="inspectioncb" checked><label for="inspectioncb">inspection</label>
+				</span>
+				<br>
+				<input type="number" id="inspectionTime" value="15" max="999"> seconds
+			</div>
+			<div class="contopt" id="contopt2">
+				<div class="listcontheader">
+					keybinds
+				</div>
+				in development
+			</div>
+			<div class="contopt" id="contopt3">
+				<div class="listcontheader">
+					theme
+				</div>
+				in development
+			</div>
+		</div>
+		<div class="closeoption">
+			&times
+		</div>
+	</div>
+</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="global.js"></script>
-<script src="options.js"></script>
-<script src="scramble.js"></script>
-<script src="timer.js"></script>
+<script src="js/global.js"></script>
+<script src="js/options.js"></script>
+<script src="js/scramble.js"></script>
+<script src="js/sessions.js"></script>
+<script src="js/timer.js"></script>
 <script>
 </script>
 </html>
